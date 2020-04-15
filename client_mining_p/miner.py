@@ -54,6 +54,8 @@ if __name__ == '__main__':
     print("ID is", id)
     f.close()
 
+    
+
     # Run forever until interrupted
     while True:
         r = requests.get(url=node + "/last_block")
