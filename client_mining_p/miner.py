@@ -54,7 +54,7 @@ if __name__ == '__main__':
     print("ID is", id)
     f.close()
 
-    
+    coins_mined = 0
 
     # Run forever until interrupted
     while True:
@@ -62,6 +62,7 @@ if __name__ == '__main__':
         # Handle non-json response
         try:
             data = r.json()
+            print(data)
         except ValueError:
             print("Error:  Non-json response")
             print("Response returned:")

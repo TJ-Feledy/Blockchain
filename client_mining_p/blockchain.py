@@ -141,6 +141,7 @@ def get_last_block():
 @app.route('/mine', methods=['POST'])
 def mine():
     data = request.get_json()
+    print(data)
 
     if 'id' not in data or 'proof' not in data:
         response = {'message': 'Missing values'}
@@ -180,7 +181,7 @@ def mine():
     #     'block': new_block
     # }
 
-    # return jsonify(response), 200
+    return jsonify(response), 200
 
 
 @app.route('/chain', methods=['GET'])
